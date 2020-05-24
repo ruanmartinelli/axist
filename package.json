@@ -1,7 +1,7 @@
 {
   "name": "axist",
   "version": "0.0.2",
-  "description": "",
+  "description": "Minimal (5kb) drop-in CSS library.",
   "scripts": {
     "clean": "npx rimraf dist",
     "dist": "npx mkdirp dist && cp src/index.css dist/axist.css && npx uglifycss src/index.css > dist/axist.min.css",
