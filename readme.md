@@ -7,8 +7,6 @@
     <br>
 </div>
 
-# axist
-
 ## License
 
 MIT © [Ruan Martinelli](https://github.com/ruanmartinelli)
