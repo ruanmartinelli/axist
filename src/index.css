@@ -1,0 +1,411 @@
+/*
+
+Sizes:
+  - 3.815rem
+  - 3.052rem
+  - 2.441rem
+  - 1.953rem
+  - 1.563rem
+  - 1.25rem
+  - 1rem
+  - 0.8rem
+  - 0.64rem
+  - 0.512rem
+  - 0.41rem
+  - 0.328rem
+  - 0.262rem
+  - 0.209rem
+
+Main Colors:
+  - Blue #1524d9
+  - Black: #212529
+  - Gray: #616060
+  - Drak Gray: #343334
+  - Light Gray: #f6f6f6
+  - Pink: #ff2e88
+  - White: #fff
+*/
+
+/* Root
+––––––––––––––––––––––––––––––––– */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-family:
+    Menlo,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New,
+    monospace,
+    serif;
+}
+
+html {
+  font-size: calc(10px + ((100vw - 600px) / 250));
+  margin: 0;
+  padding: 0;
+  text-decoration-skip-ink: "auto";
+  line-height: 1.953rem;
+}
+
+body {
+  padding: 0;
+  margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
+  background-color: white;
+  color: #212529;
+  caret-color: #212529;
+  word-wrap: break-word;
+}
+
+/* Typography
+––––––––––––––––––––––––––––––––– */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.052rem;
+  letter-spacing: -0.15rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.441rem;
+  letter-spacing: -0.12rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.953rem;
+  letter-spacing: -0.09rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.563rem;
+  letter-spacing: -0.06rem;
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 1.25rem;
+  letter-spacing: -0.03rem;
+  line-height: 1.4;
+}
+
+h6 {
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: 1.563rem;
+}
+
+p > *:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: #ff2e88;
+  text-decoration: none;
+  border-bottom: 1px solid #ff2e88;
+  border-radius: 5px;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: #ff2e88;
+    color: #fff;
+  }
+}
+
+small {
+  font-size: 0.888rem;
+}
+
+hr {
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+  border: 0;
+  margin: 20px 0;
+}
+
+hr::after {
+  content: "----------------------------------------------------------------------------------------------------";
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Form
+––––––––––––––––––––––––––––––––– */
+label,
+legend {
+  font-weight: bold;
+  display: inline-block;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input:not([type]) {
+  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid #f6f6f6;
+  color: #212529;
+  appearance: none;
+  border-radius: 0;
+  background-color: #f6f6f6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select {
+  display: block;
+  padding: 1rem;
+  font-size: 1em;
+  border: 2px solid #f6f6f6;
+  border-radius: 0;
+  color: #212529;
+  background-color: #f6f6f6;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+textarea {
+  display: block;
+  font-size: 1rem;
+  padding: 1rem;
+  line-height: 1rem;
+  border-radius: 0;
+  border: 2px solid #f6f6f6;
+  color: #212529;
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  resize: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #1524d9;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border: 2px solid #ff7d87;
+  box-shadow: none;
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  padding: 0.5rem 0.64rem;
+  font-size: 0.8rem;
+  border: 0;
+  border-radius: 0;
+  color: #f6f6f6;
+  height: 2.5rem;
+  background-color: #1524d9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-weight: bold;
+}
+
+@media (hover: hover) {
+  input[type="reset"]:hover,
+  input[type="submit"]:hover,
+  input[type="button"]:hover,
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible,
+input[type="button"]:focus-visible {
+  border-color: #5aaafa;
+  outline: none;
+}
+
+input[disabled],
+button:disabled {
+  background-color: #616060;
+}
+
+/* Tables
+––––––––––––––––––––––––––––––––– */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+}
+
+th,
+td {
+  vertical-align: top;
+  border: 1px solid #ccc;
+  line-height: 15px;
+  padding: 10px;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Code
+––––––––––––––––––––––––––––––––– */
+code {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  background: #f6f6f6;
+  padding: 0.209rem 0.41rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+p > code {
+  white-space: normal;
+}
+
+pre > code {
+  line-height: 1.563em;
+  display: block;
+  padding: 1rem;
+  white-space: pre;
+  margin-bottom: 1.563rem;
+  overflow: scroll;
+}
+
+/* Forces a new-line at the end of a code block for layout purposes. */
+pre > code::after {
+  content: " ";
+}
+
+/* Blockquote
+––––––––––––––––––––––––––––––––– */
+blockquote {
+  border-left: 1px solid lightgray;
+  padding: 0 1rem;
+  margin-bottom: 1.563rem;
+}
+
+/* List
+––––––––––––––––––––––––––––––––– */
+ul {
+  margin: 0;
+  padding: 0 1px;
+  list-style: disc outside;
+  font-variant-numeric: tabular-nums;
+}
+
+ol {
+  list-style: decimal outside;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style-position: inside;
+}
+
+/* Keyboard
+––––––––––––––––––––––––––––––––– */
+kbd {
+  display: inline-block;
+  padding: 0 0.328rem;
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
+  font-size: 0.64rem;
+  color: #343334;
+  vertical-align: middle;
+  background-color: #f9f9f9;
+  border: solid 1px #d8d8d8;
+  border-bottom: solid 2px #a6a5a6;
+  border-radius: 5px;
+}
+
+/* Abbreviation
+––––––––––––––––––––––––––––––––– */
+abbr {
+  text-decoration: none;
+  border-bottom: 2px dashed #949394;
+}
+
+@media (hover: hover) {
+  abbr:hover {
+    cursor: help;
+  }
+}

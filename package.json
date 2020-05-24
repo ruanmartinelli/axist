@@ -1,0 +1,29 @@
+{
+  "name": "axist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "npx rimraf dist",
+    "dist": "npx mkdirp dist && cp src/index.css dist/axist.css && npx uglifycss src/index.css > dist/axist.min.css",
+    "build": "npm run clean && npm run dist",
+    "test": "stylelint src/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruanmartinelli/axist.git"
+  },
+  "author": "Ruan Martinelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruanmartinelli/axist/issues"
+  },
+  "homepage": "https://github.com/ruanmartinelli/axist#readme",
+  "devDependencies": {
+    "stylelint": "^13.5.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  }
+}
