@@ -1,13 +1,14 @@
 {
   "name": "axist",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "clean": "npx rimraf dist",
     "dist": "npx mkdirp dist && cp src/index.css dist/axist.css && npx uglifycss src/index.css > dist/axist.min.css",
     "build": "npm run clean && npm run dist",
-    "test": "stylelint src/index.css"
+    "test": "stylelint src/index.css",
+    "prepublishOnly": "npm run test",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
