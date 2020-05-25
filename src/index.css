@@ -49,6 +49,10 @@ Main Colors:
     serif;
 }
 
+/* "Avenir Next W01", "Avenir Next", Helvetica, sans-serif; */
+
+/* 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif; */
+
 html {
   font-size: calc(10px + ((100vw - 600px) / 250));
   margin: 0;
