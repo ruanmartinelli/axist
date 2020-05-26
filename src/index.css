@@ -38,15 +38,14 @@ Main Colors:
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   font-family:
-    Menlo,
-    Monaco,
-    Lucida Console,
-    Liberation Mono,
-    DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,
-    Courier New,
-    monospace,
-    serif;
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif;
 }
 
 /* "Avenir Next W01", "Avenir Next", Helvetica, sans-serif; */
@@ -54,11 +53,14 @@ Main Colors:
 /* 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif; */
 
 html {
-  font-size: calc(10px + ((100vw - 600px) / 250));
-  margin: 0;
+  font-size: calc(12px + ((100vw - 600px) / 250));
   padding: 0;
   text-decoration-skip-ink: "auto";
   line-height: 1.953rem;
+  margin: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  max-width: 1140px;
 }
 
 body {
@@ -257,8 +259,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-  padding: 0.5rem 0.64rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
   border: 0;
   border-radius: 0;
   color: #f6f6f6;
@@ -297,19 +299,21 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.75rem 0;
+  font-variant-numeric: tabular-nums;
 }
 
 th,
 td {
   vertical-align: top;
-  border: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
   line-height: 15px;
-  padding: 10px;
+  padding: 15px;
 }
 
 th {
   font-weight: bold;
   text-align: left;
+  color: #343334;
 }
 
 /* Code

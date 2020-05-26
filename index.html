@@ -7,10 +7,8 @@
     <title>Axist</title>
     <style>
       .title {
-        text-transform: uppercase;
         padding: 1rem 0;
         border-bottom: 2px solid #ccc;
-        letter-spacing: 0.209rem;
         font-family: Arial, Helvetica, sans-serif;
       }
 
@@ -26,6 +24,22 @@
       .section {
         margin-bottom: 5rem;
       }
+
+      .w-100 {
+        width: 100%;
+      }
+
+      .w-33 {
+        width: 33%;
+      }
+
+      .d-inline-block {
+        display: inline-block;
+      }
+
+      section {
+        padding: 3.815rem 0;
+      }
     </style>
   </head>
   <body>
@@ -34,7 +48,9 @@
         <img src="./logo.png" width="200" />
         <h2>axist</h2>
         <p>Minimal (5kb) drop-in CSS library.</p>
-        <code>&lt;link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" /&gt;</code>
+        <pre>
+          <code>&lt;link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" /&gt;</code>
+        </pre>
       </div>
 
       <section id="typography">
@@ -55,199 +71,149 @@
             or more sentences.
           </p>
         </div>
-        <article>
-          <h3>Blockquotes</h3>
-          <div>
-            <blockquote>
-              <p>
-                “Years ago my mother used to say to me, she’d say, ‘In this
-                world, Elwood, you must be’ - she always called me Elwood - ‘In
-                this world, Elwood, you must be oh so smart or oh so pleasant.’
-                Well, for years I was smart. I recommend pleasant. You may quote
-                me.”
-              </p>
-              <cite>- Elwood P. Dowd, Havey</cite>
-            </blockquote>
-          </div>
-          <footer>
-            <p><a href="#top">[Top]</a></p>
-          </footer>
-        </article>
-        <section>
-          <h3>Buttons</h3>
+        <h5>Blockquotes</h5>
+        <div>
+          <blockquote>
+            <p>
+              “Years ago my mother used to say to me, she’d say, ‘In this world,
+              Elwood, you must be’ - she always called me Elwood - ‘In this
+              world, Elwood, you must be oh so smart or oh so pleasant.’ Well,
+              for years I was smart. I recommend pleasant. You may quote me.”
+            </p>
+            <cite>- Elwood P. Dowd, Harvey</cite>
+          </blockquote>
+        </div>
+        <footer>
+          <p><a href="#top">[Top]</a></p>
+        </footer>
+      </section>
+
+      <section id="forms">
+        <h3 class="title">Forms</h3>
+        <form>
           <fieldset>
             <p>
-              <button type="submit">&lt;button type=submit&gt;</button>
-              <button type="button">&lt;button type=button&gt;</button>
-              <button type="reset">&lt;button type=reset&gt;</button>
-              <button type="button" disabled>&lt;button disabled&gt;</button>
+              <label for="input__text">Text Input</label>
+              <input
+                id="input__text"
+                class="w-100"
+                type="text"
+                placeholder="Text Input"
+              />
+            </p>
+            <p>
+              <label for="select">Select</label>
+              <select id="select" class="w-100">
+                <optgroup label="Option Group">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </optgroup>
+              </select>
+            </p>
+            <p>
+              <label for="textarea">Textarea</label>
+              <textarea
+                id="textarea"
+                rows="8"
+                placeholder="Enter your message here"
+                class="w-100"
+              ></textarea>
+            </p>
+            <ul>
+              <li>
+                <label for="checkbox1"
+                  ><input
+                    id="checkbox1"
+                    name="checkbox"
+                    type="checkbox"
+                    checked="checked"
+                  />
+                  Checkbox</label
+                >
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label for="radio1"
+                  ><input
+                    id="radio1"
+                    name="radio"
+                    type="radio"
+                    class="radio"
+                    checked="checked"
+                  />
+                  Radio</label
+                >
+              </li>
+              <li>
+                <label for="radio2"
+                  ><input id="radio2" name="radio" type="radio" class="radio" />
+                  Button</label
+                >
+              </li>
+            </ul>
+            <p>
+              <input type="submit" value="Submit" />
+              <button disabled>Disabled</button>
             </p>
           </fieldset>
-
-          <h3>Forms</h3>
-          <form>
-            <fieldset>
-              <p>
-                <label for="input__text">Text Input</label>
-                <input id="input__text" type="text" placeholder="Text Input" />
-              </p>
-              <p>
-                <label for="select">Select</label>
-                <select id="select">
-                  <optgroup label="Option Group">
-                    <option>Option One</option>
-                    <option>Option Two</option>
-                    <option>Option Three</option>
-                  </optgroup>
-                </select>
-              </p>
-              <p>
-                <label for="textarea">Textarea</label>
-                <textarea
-                  id="textarea"
-                  rows="8"
-                  cols="48"
-                  placeholder="Enter your message here"
-                ></textarea>
-              </p>
-              <ul>
-                <li>
-                  <label for="checkbox1"
-                    ><input
-                      id="checkbox1"
-                      name="checkbox"
-                      type="checkbox"
-                      checked="checked"
-                    />
-                    Checkbox</label
-                  >
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <label for="radio1"
-                    ><input
-                      id="radio1"
-                      name="radio"
-                      type="radio"
-                      class="radio"
-                      checked="checked"
-                    />
-                    Radio</label
-                  >
-                </li>
-                <li>
-                  <label for="radio2"
-                    ><input
-                      id="radio2"
-                      name="radio"
-                      type="radio"
-                      class="radio"
-                    />
-                    Button</label
-                  >
-                </li>
-              </ul>
-              <p>
-                <label for="ir">Range input</label>
-                <input type="range" id="ir" value="10" />
-              </p>
-            </fieldset>
-            <p><a href="#top">[Top]</a></p>
-          </form>
-        </section>
-
-        <section>
-          <article>
-            <h3>Lists</h3>
-            <div>
-              <h3>Ordered List</h3>
-              <ol>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-              </ol>
-              <h3>Unordered List</h3>
-              <ul>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-              </ul>
-            </div>
-            <footer>
-              <p><a href="#top">[Top]</a></p>
-            </footer>
-          </article>
-          <article>
-            <h3>Horizontal rules</h3>
-            <div>
-              <hr />
-            </div>
-            <footer>
-              <p><a href="#top">[Top]</a></p>
-            </footer>
-          </article>
-          <article>
-            <h3>Tables</h3>
-            <table>
-              <caption>
-                Table Caption
-              </caption>
-              <thead>
-                <tr>
-                  <th>Table Heading 1</th>
-                  <th>Table Heading 2</th>
-                  <th>Table Heading 3</th>
-                  <th>Table Heading 4</th>
-                  <th>Table Heading 5</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th>Table Footer 1</th>
-                  <th>Table Footer 2</th>
-                  <th>Table Footer 3</th>
-                  <th>Table Footer 4</th>
-                  <th>Table Footer 5</th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <td>Table Cell 1</td>
-                  <td>Table Cell 2</td>
-                  <td>Table Cell 3</td>
-                  <td>Table Cell 4</td>
-                  <td>Table Cell 5</td>
-                </tr>
-                <tr>
-                  <td>Table Cell 1</td>
-                  <td>Table Cell 2</td>
-                  <td>Table Cell 3</td>
-                  <td>Table Cell 4</td>
-                  <td>Table Cell 5</td>
-                </tr>
-                <tr>
-                  <td>Table Cell 1</td>
-                  <td>Table Cell 2</td>
-                  <td>Table Cell 3</td>
-                  <td>Table Cell 4</td>
-                  <td>Table Cell 5</td>
-                </tr>
-                <tr>
-                  <td>Table Cell 1</td>
-                  <td>Table Cell 2</td>
-                  <td>Table Cell 3</td>
-                  <td>Table Cell 4</td>
-                  <td>Table Cell 5</td>
-                </tr>
-              </tbody>
-            </table>
-            <footer>
-              <p><a href="#top">[Top]</a></p>
-            </footer>
-          </article>
-        </section>
+          <p><a href="#top">[Top]</a></p>
+        </form>
       </section>
+
+      <section id="lists">
+        <h3 class="title">Lists</h3>
+        <h3>Lists</h3>
+        <div class="d-inline-block w-33">
+          <h5>Ordered List</h5>
+          <ol>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+          </ol>
+        </div>
+        <div class="d-inline-block w-33">
+          <h5>Unordered List</h5>
+          <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="tables">
+        <h3 class="title">Tables</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Rating</th>
+              <th>Released</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Harvey</td>
+              <td>4.0</td>
+              <td>1950</td>
+            </tr>
+            <tr>
+              <td>The Shining</td>
+              <td>4.2</td>
+              <td>1980</td>
+            </tr>
+            <tr>
+              <td>Metropolis</td>
+              <td>4.1</td>
+              <td>1927</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
       <section>
         <article>
           <h3>Code</h3>
