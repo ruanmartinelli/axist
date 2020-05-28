@@ -23,9 +23,10 @@ Sizes:
   --primary: #1524d9;
   --light-primary: #434fc9;
   --secondary: #ff2e88;
+  --light-secondary: #fc77b1;
   --red: red;
   --black: #212529;
-  --white: #fff;
+  --white: #fdfdfd;
   --dark-gray: #343334;
   --gray: #616060;
   --light-gray: #ccc;
@@ -65,7 +66,7 @@ Sizes:
 }
 
 html {
-  font-size: calc(12px + ((100vw - 600px) / 250));
+  font-size: calc(16px + ((100vw - 600px) / 250));
   padding: 0;
   text-decoration-skip-ink: "auto";
   line-height: 1.953rem;
@@ -83,9 +84,6 @@ body {
   caret-color: var(--black);
   word-wrap: break-word;
 }
-
-/* Typography
-––––––––––––––––––––––––––––––––– */
 
 h1,
 h2,
@@ -142,19 +140,20 @@ p > *:last-child {
   margin-bottom: 0;
 }
 
+blockquote {
+  border-left: 1px solid var(--light-gray);
+  padding: 0 1rem;
+  margin-bottom: 1.563rem;
+}
+
 a {
   color: var(--secondary);
   text-decoration: none;
-  border-bottom: 1px solid var(--secondary);
-  border-radius: 5px;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 2px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: var(--secondary);
-    color: var(--white);
+    text-decoration: underline;
   }
 }
 
@@ -163,21 +162,10 @@ small {
 }
 
 hr {
-  position: relative;
-  height: 20px;
-  overflow: hidden;
   border: 0;
-  margin: 20px 0;
-}
-
-hr::after {
-  content: "----------------------------------------------------------------------------------------------------";
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 20px;
-  width: 100%;
-  word-wrap: break-word;
+  height: 2px;
+  margin: 1rem 0;
+  background: var(--light-gray);
 }
 
 fieldset {
@@ -186,8 +174,6 @@ fieldset {
   margin: 0;
 }
 
-/* Form
-––––––––––––––––––––––––––––––––– */
 label,
 legend {
   font-weight: bold;
@@ -305,8 +291,6 @@ button:disabled {
   background-color: var(--gray);
 }
 
-/* Tables
-––––––––––––––––––––––––––––––––– */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -328,53 +312,33 @@ th {
   color: var(--dark-gray);
 }
 
-/* Code
-––––––––––––––––––––––––––––––––– */
-code {
-  font-family:
-    "SFMono-Regular",
-    Consolas,
-    "Liberation Mono",
-    Menlo,
-    Courier,
-    monospace;
+code,
+pre {
+  font-family: var(--font-monospace);
+  color: var(--dark-gray);
+  background-color: var(--lighter-gray);
   font-size: 0.8rem;
-  white-space: nowrap;
-  background: var(--lighter-gray);
-  padding: 0.209rem 0.41rem;
-  display: inline-block;
   vertical-align: middle;
-}
-
-p > code {
-  white-space: normal;
-}
-
-pre > code {
-  line-height: 1.563em;
-  display: block;
-  padding: 1rem;
-  white-space: pre;
-  margin-bottom: 1.563rem;
   overflow: scroll;
   border-radius: var(--boder-radius);
 }
 
-/* Forces a new-line at the end of a code block for layout purposes. */
-pre > code::after {
+code {
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding: 0 0.328rem;
+}
+
+pre {
+  white-space: pre;
+  margin: 0.262rem 0;
+  padding: 0.64rem 1rem;
+}
+
+pre::after {
   content: " ";
 }
 
-/* Blockquote
-––––––––––––––––––––––––––––––––– */
-blockquote {
-  border-left: 1px solid var(--light-gray);
-  padding: 0 1rem;
-  margin-bottom: 1.563rem;
-}
-
-/* List
-––––––––––––––––––––––––––––––––– */
 ul {
   margin: 0;
   padding: 0 1px;
@@ -397,8 +361,6 @@ li {
   list-style-position: inside;
 }
 
-/* Keyboard
-––––––––––––––––––––––––––––––––– */
 kbd {
   display: inline-block;
   padding: 0 0.328rem;
@@ -418,8 +380,6 @@ kbd {
   border-radius: 5px;
 }
 
-/* Abbreviation
-––––––––––––––––––––––––––––––––– */
 abbr {
   text-decoration: none;
   border-bottom: 2px dashed #949394;

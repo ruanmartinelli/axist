@@ -8,7 +8,8 @@
     "build": "npm run clean && npm run dist",
     "test": "stylelint src/index.css",
     "prepublishOnly": "npm run test",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "start": "npx serve"
   },
   "repository": {
     "type": "git",
