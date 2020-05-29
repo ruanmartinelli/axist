@@ -7,6 +7,8 @@
     <br>
 </div>
 
+![build](https://github.com/ruanmartinelli/axist/workflows/build/badge.svg)
+
 ## Installation
 
 Import in your HTML:
