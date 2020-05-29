@@ -7,6 +7,24 @@
     <br>
 </div>
 
+![build](https://github.com/ruanmartinelli/axist/workflows/build/badge.svg)
+
+## Installation
+
+Import in your HTML:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" />
+```
+
+With npm:
+
+```bash
+npm i axist
+
+# import '../node_modules/axist/dist/axist.min.css'
+```
+
 ## License
 
 MIT © [Ruan Martinelli](https://github.com/ruanmartinelli)

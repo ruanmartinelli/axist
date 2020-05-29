@@ -16,18 +16,43 @@ Sizes:
   - 0.262rem
   - 0.209rem
 
-Main Colors:
-  - Blue #1524d9
-  - Black: #212529
-  - Gray: #616060
-  - Drak Gray: #343334
-  - Light Gray: #f6f6f6
-  - Pink: #ff2e88
-  - White: #fff
-*/
-
 /* Root
 ––––––––––––––––––––––––––––––––– */
+
+:root {
+  --primary: #1524d9;
+  --light-primary: #434fc9;
+  --secondary: #ff2e88;
+  --light-secondary: #fc77b1;
+  --red: red;
+  --black: #212529;
+  --white: #fdfdfd;
+  --dark-gray: #343334;
+  --gray: #616060;
+  --light-gray: #ccc;
+  --lighter-gray: #f6f6f6;
+  --font-sans-serif:
+    system-ui,
+    -apple-system,
+    segoe ui,
+    roboto,
+    ubuntu,
+    helvetica,
+    cantarell,
+    noto sans,
+    sans-serif;
+  --font-monospace:
+    menlo,
+    monaco,
+    lucida console,
+    liberation mono,
+    dejavu sans mono,
+    bitstream vera sans mono,
+    courier new,
+    monospace,
+    serif;
+  --boder-radius: 0.2rem;
+}
 
 * {
   box-sizing: border-box;
@@ -37,37 +62,28 @@ Main Colors:
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
-  font-family:
-    Menlo,
-    Monaco,
-    Lucida Console,
-    Liberation Mono,
-    DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,
-    Courier New,
-    monospace,
-    serif;
+  font-family: var(--font-sans-serif);
 }
 
 html {
-  font-size: calc(10px + ((100vw - 600px) / 250));
-  margin: 0;
+  font-size: calc(16px + ((100vw - 600px) / 250));
   padding: 0;
   text-decoration-skip-ink: "auto";
   line-height: 1.953rem;
+  margin: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  max-width: 1140px;
 }
 
 body {
   padding: 0;
   margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
-  background-color: white;
-  color: #212529;
-  caret-color: #212529;
+  background-color: var(--white);
+  color: var(--black);
+  caret-color: var(--black);
   word-wrap: break-word;
 }
-
-/* Typography
-––––––––––––––––––––––––––––––––– */
 
 h1,
 h2,
@@ -124,19 +140,20 @@ p > *:last-child {
   margin-bottom: 0;
 }
 
+blockquote {
+  border-left: 1px solid var(--light-gray);
+  padding: 0 1rem;
+  margin-bottom: 1.563rem;
+}
+
 a {
-  color: #ff2e88;
+  color: var(--secondary);
   text-decoration: none;
-  border-bottom: 1px solid #ff2e88;
-  border-radius: 5px;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 2px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: #ff2e88;
-    color: #fff;
+    text-decoration: underline;
   }
 }
 
@@ -145,21 +162,10 @@ small {
 }
 
 hr {
-  position: relative;
-  height: 20px;
-  overflow: hidden;
   border: 0;
-  margin: 20px 0;
-}
-
-hr::after {
-  content: "----------------------------------------------------------------------------------------------------";
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 20px;
-  width: 100%;
-  word-wrap: break-word;
+  height: 2px;
+  margin: 1rem 0;
+  background: var(--light-gray);
 }
 
 fieldset {
@@ -168,8 +174,6 @@ fieldset {
   margin: 0;
 }
 
-/* Form
-––––––––––––––––––––––––––––––––– */
 label,
 legend {
   font-weight: bold;
@@ -192,11 +196,11 @@ input:not([type]) {
   display: block;
   padding: 1rem;
   font-size: 1rem;
-  border: 2px solid #f6f6f6;
-  color: #212529;
+  border: 2px solid var(--lighter-gray);
+  color: var(--black);
   appearance: none;
-  border-radius: 0;
-  background-color: #f6f6f6;
+  border-radius: var(--boder-radius);
+  background-color: var(--lighter-gray);
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -205,10 +209,10 @@ select {
   display: block;
   padding: 1rem;
   font-size: 1em;
-  border: 2px solid #f6f6f6;
-  border-radius: 0;
-  color: #212529;
-  background-color: #f6f6f6;
+  border: 2px solid var(--lighter-gray);
+  border-radius: var(--boder-radius);
+  color: var(--black);
+  background-color: var(--lighter-gray);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -219,10 +223,10 @@ textarea {
   font-size: 1rem;
   padding: 1rem;
   line-height: 1rem;
-  border-radius: 0;
-  border: 2px solid #f6f6f6;
-  color: #212529;
-  background-color: #f6f6f6;
+  color: var(--black);
+  border-radius: var(--boder-radius);
+  border: 2px solid var(--lighter-gray);
+  background-color: var(--lighter-gray);
   box-sizing: border-box;
   resize: none;
   appearance: none;
@@ -234,14 +238,14 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border: 2px solid #1524d9;
+  border: 2px solid var(--primary);
 }
 
 input:invalid,
 select:invalid,
 textarea:invalid {
-  border: 2px solid #ff7d87;
-  box-shadow: none;
+  border: 2px solid var(--red);
+  outline: none;
 }
 
 input[type="checkbox"]:hover,
@@ -253,13 +257,13 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-  padding: 0.5rem 0.64rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
   border: 0;
-  border-radius: 0;
-  color: #f6f6f6;
+  border-radius: var(--boder-radius);
+  color: var(--lighter-gray);
   height: 2.5rem;
-  background-color: #1524d9;
+  background-color: var(--primary);
   -webkit-appearance: none;
   -moz-appearance: none;
   font-weight: bold;
@@ -278,82 +282,63 @@ button:focus-visible,
 input[type="submit"]:focus-visible,
 input[type="reset"]:focus-visible,
 input[type="button"]:focus-visible {
-  border-color: #5aaafa;
+  border-color: var(--light-primary);
   outline: none;
 }
 
 input[disabled],
 button:disabled {
-  background-color: #616060;
+  background-color: var(--gray);
 }
 
-/* Tables
-––––––––––––––––––––––––––––––––– */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.75rem 0;
+  font-variant-numeric: tabular-nums;
 }
 
 th,
 td {
   vertical-align: top;
-  border: 1px solid #ccc;
+  border-bottom: 2px solid var(--light-gray);
   line-height: 15px;
-  padding: 10px;
+  padding: 15px;
 }
 
 th {
   font-weight: bold;
   text-align: left;
+  color: var(--dark-gray);
 }
 
-/* Code
-––––––––––––––––––––––––––––––––– */
-code {
-  font-family:
-    "SFMono-Regular",
-    Consolas,
-    "Liberation Mono",
-    Menlo,
-    Courier,
-    monospace;
+code,
+pre {
+  font-family: var(--font-monospace);
+  color: var(--dark-gray);
+  background-color: var(--lighter-gray);
   font-size: 0.8rem;
-  white-space: nowrap;
-  background: #f6f6f6;
-  padding: 0.209rem 0.41rem;
-  display: inline-block;
   vertical-align: middle;
-}
-
-p > code {
-  white-space: normal;
-}
-
-pre > code {
-  line-height: 1.563em;
-  display: block;
-  padding: 1rem;
-  white-space: pre;
-  margin-bottom: 1.563rem;
   overflow: scroll;
+  border-radius: var(--boder-radius);
 }
 
-/* Forces a new-line at the end of a code block for layout purposes. */
-pre > code::after {
+code {
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding: 0 0.328rem;
+}
+
+pre {
+  white-space: pre;
+  margin: 0.262rem 0;
+  padding: 0.64rem 1rem;
+}
+
+pre::after {
   content: " ";
 }
 
-/* Blockquote
-––––––––––––––––––––––––––––––––– */
-blockquote {
-  border-left: 1px solid lightgray;
-  padding: 0 1rem;
-  margin-bottom: 1.563rem;
-}
-
-/* List
-––––––––––––––––––––––––––––––––– */
 ul {
   margin: 0;
   padding: 0 1px;
@@ -376,8 +361,6 @@ li {
   list-style-position: inside;
 }
 
-/* Keyboard
-––––––––––––––––––––––––––––––––– */
 kbd {
   display: inline-block;
   padding: 0 0.328rem;
@@ -389,7 +372,7 @@ kbd {
     Courier,
     monospace;
   font-size: 0.64rem;
-  color: #343334;
+  color: var(--dark-gray);
   vertical-align: middle;
   background-color: #f9f9f9;
   border: solid 1px #d8d8d8;
@@ -397,8 +380,6 @@ kbd {
   border-radius: 5px;
 }
 
-/* Abbreviation
-––––––––––––––––––––––––––––––––– */
 abbr {
   text-decoration: none;
   border-bottom: 2px dashed #949394;

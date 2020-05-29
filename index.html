@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css" />
+    <title>axist</title>
+    <style>
+      .title-link,
+      .title-link:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .title:hover {
+        color: #494949;
+      }
+
+      .title::before {
+        content: "# ";
+        color: var(--secondary);
+      }
+
+      .header {
+        min-height: 65vh;
+        margin: auto 0;
+      }
+
+      .header > p {
+        color: #464646;
+      }
+
+      .w-100 {
+        width: 100%;
+      }
+
+      .w-33 {
+        width: 33%;
+      }
+      .w-50 {
+        width: 49%;
+      }
+
+      .d-inline-block {
+        display: inline-block;
+      }
+
+      section {
+        padding: 2rem 0;
+      }
+
+      footer {
+        margin-top: 2rem;
+        padding: 1rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <div class="header">
+        <img src="./logo.png" width="200" />
+        <h2>axist</h2>
+        <p>Minimal (5kb) drop-in CSS library.</p>
+
+        <p>
+          <a href="https://github.com/ruanmartinelli/axist">GitHub</a>
+        </p>
+      </div>
+
+      <section id="installation">
+        <a class="title-link" href="#typography">
+          <h3 class="title">Usage</h3>
+        </a>
+        Install via npm:
+        <pre>npm i axist</pre>
+        <br />
+        Import in your HTML:
+        <pre>
+&lt;link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" /&gt;</pre
+        >
+      </section>
+
+      <section id="typography">
+        <a class="title-link" href="#typography">
+          <h3 class="title">Typography</h3>
+        </a>
+
+        <div>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div>
+        <div>
+          <h5>Paragraph</h5>
+
+          <p>
+            A paragraph (from the Ancient Greek παράγραφος, parágraphos, "to
+            write beside") is a self-contained unit of a discourse in writing
+            dealing with a particular point or idea. A paragraph consists of one
+            or more sentences.
+          </p>
+        </div>
+        <h5>Blockquotes</h5>
+        <div>
+          <blockquote>
+            <p>
+              “Years ago my mother used to say to me, she’d say, ‘In this world,
+              Elwood, you must be’ - she always called me Elwood - ‘In this
+              world, Elwood, you must be oh so smart or oh so pleasant.’ Well,
+              for years I was smart. I recommend pleasant. You may quote me.”
+            </p>
+            <cite>- Elwood P. Dowd, Harvey</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="forms">
+        <a class="title-link" href="#forms"
+          ><h3 class="title" class="title">Forms</h3></a
+        >
+        <form>
+          <fieldset>
+            <p>
+              <label for="input__text">Text Input</label>
+              <input
+                id="input__text"
+                class="w-100"
+                type="text"
+                placeholder="Text Input"
+              />
+            </p>
+            <p>
+              <label for="select">Select</label>
+              <select id="select" class="w-100">
+                <optgroup label="Option Group">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                </optgroup>
+              </select>
+            </p>
+            <p>
+              <label for="textarea">Textarea</label>
+              <textarea
+                id="textarea"
+                rows="8"
+                placeholder="Enter your message here"
+                class="w-100"
+              ></textarea>
+            </p>
+            <ul>
+              <li>
+                <label for="checkbox1"
+                  ><input
+                    id="checkbox1"
+                    name="checkbox"
+                    type="checkbox"
+                    checked="checked"
+                  />
+                  Checkbox</label
+                >
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label for="radio1"
+                  ><input
+                    id="radio1"
+                    name="radio"
+                    type="radio"
+                    class="radio"
+                    checked="checked"
+                  />
+                  Radio</label
+                >
+              </li>
+              <li>
+                <label for="radio2"
+                  ><input id="radio2" name="radio" type="radio" class="radio" />
+                  Button</label
+                >
+              </li>
+            </ul>
+            <p>
+              <input type="submit" value="Submit" />
+              <button disabled>Disabled</button>
+            </p>
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="lists">
+        <a class="title-link" href="#lists"><h3 class="title">Lists</h3></a>
+        <div class="d-inline-block w-50">
+          <h5>Ordered List</h5>
+          <ol>
+            <li>1984</li>
+            <li>To Kill a Mockingbird</li>
+            <li>The Catcher in the Rye</li>
+          </ol>
+        </div>
+        <div class="d-inline-block w-50">
+          <h5>Unordered List</h5>
+          <ul>
+            <li>Apples</li>
+            <li>Eggs</li>
+            <li>Avocados</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="tables">
+        <a class="title-link" href="#tables"><h3 class="title">Tables</h3></a>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Rating</th>
+              <th>Released</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Harvey</td>
+              <td>4.0</td>
+              <td>1950</td>
+            </tr>
+            <tr>
+              <td>The Shining</td>
+              <td>4.2</td>
+              <td>1980</td>
+            </tr>
+            <tr>
+              <td>Metropolis</td>
+              <td>4.1</td>
+              <td>1927</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="other">
+        <a class="title-link" href="#other"><h3 class="title">Other</h3></a>
+        <div>
+          <h5>Keyboard</h5>
+          <p><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>C</kbd></p>
+
+          <h5>Code</h5>
+          <code class="w-100">npm install axist</code>
+
+          <h5>Preformatted text</h5>
+          <pre>
+  .🎨 {
+  color: deeppink;
+  background-color: papayawhip;
+  }</pre
+          >
+        </div>
+      </section>
+      <footer>
+        <p>
+          <span style="float: left;">© 2020 Ruan Martinelli</span>
+          <a style="float: right;" href="#top">Go to top ↑</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
