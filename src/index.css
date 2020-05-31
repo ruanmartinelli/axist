@@ -1,27 +1,23 @@
 /*
-
-Sizes:
-  - 3.815rem
-  - 3.052rem
-  - 2.441rem
-  - 1.953rem
-  - 1.563rem
-  - 1.25rem
-  - 1rem
-  - 0.8rem
-  - 0.64rem
-  - 0.512rem
-  - 0.41rem
-  - 0.328rem
-  - 0.262rem
-  - 0.209rem
-
-/* Root
-––––––––––––––––––––––––––––––––– */
+- 3.815rem
+- 3.052rem
+- 2.441rem
+- 1.953rem
+- 1.563rem
+- 1.25rem
+- 1rem
+- 0.8rem
+- 0.64rem
+- 0.512rem
+- 0.41rem
+- 0.328rem
+- 0.262rem
+- 0.209rem
+*/
 
 :root {
   --primary: #1524d9;
-  --light-primary: #434fc9;
+  --light-primary: #2332ea;
   --secondary: #ff2e88;
   --light-secondary: #fc77b1;
   --red: red;
@@ -147,7 +143,7 @@ blockquote {
 }
 
 a {
-  color: var(--secondary);
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -275,6 +271,7 @@ button {
   input[type="button"]:hover,
   button:hover {
     cursor: pointer;
+    background-color: var(--light-primary);
   }
 }
 
