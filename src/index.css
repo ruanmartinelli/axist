@@ -27,10 +27,26 @@
   --gray: #616060;
   --light-gray: #ccc;
   --lighter-gray: #f6f6f6;
-  --font-sans-serif: system-ui, -apple-system, segoe ui, roboto, ubuntu,
-    helvetica, cantarell, noto sans, sans-serif;
-  --font-monospace: menlo, monaco, lucida console, liberation mono,
-    dejavu sans mono, bitstream vera sans mono, courier new, monospace, serif;
+  --font-sans-serif:
+    system-ui,
+    -apple-system,
+    segoe ui,
+    roboto,
+    ubuntu,
+    helvetica,
+    cantarell,
+    noto sans,
+    sans-serif;
+  --font-monospace:
+    menlo,
+    monaco,
+    lucida console,
+    liberation mono,
+    dejavu sans mono,
+    bitstream vera sans mono,
+    courier new,
+    monospace,
+    serif;
   --boder-radius: 0.2rem;
 }
 
@@ -344,7 +360,12 @@ li {
 kbd {
   display: inline-block;
   padding: 0 0.328rem;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
     monospace;
   font-size: 0.64rem;
   color: var(--dark-gray);
