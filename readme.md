@@ -28,6 +28,13 @@ npm i axist
 # import '../node_modules/axist/dist/axist.min.css'
 ```
 
+## Used by
+
+Projects using axist:
+
+- [ruanmartinelli.com](https://ruanmartinelli.com)
+- Your project here ✨
+
 ## License
 
 MIT © [Ruan Martinelli](https://github.com/ruanmartinelli)
