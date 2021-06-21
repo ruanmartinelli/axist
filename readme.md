@@ -32,7 +32,6 @@ npm i axist
 
 Projects using axist:
 
-- [ruanmartinelli.com](https://ruanmartinelli.com?ref=axist)
 - Your project here ✨
 
 ## License
