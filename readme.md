@@ -32,6 +32,7 @@ npm i axist
 
 Projects using axist:
 
+- [Grafik Çizici (Graph Plotter)](https://yussufbiyik.github.io/grafik-cizici/)
 - Your project here ✨
 
 ## License
