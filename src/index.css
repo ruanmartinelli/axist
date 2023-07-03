@@ -164,6 +164,13 @@ hr {
   background: var(--light-gray);
 }
 
+mark
+{color: var(--primary);
+border-radius: 4px;
+background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+padding: 0.5%;
+}
+
 fieldset {
   border: none;
   padding: 0;
