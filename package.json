@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ruanmartinelli/axist#readme",
   "devDependencies": {
-    "stylelint": "^13.5.0",
+    "stylelint": "^15.10.3",
     "stylelint-config-standard": "^20.0.0"
   },
   "stylelint": {
