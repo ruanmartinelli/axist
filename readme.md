@@ -24,8 +24,12 @@ With npm:
 
 ```bash
 npm i axist
+```
 
-# import '../node_modules/axist/dist/axist.min.css'
+Then, in your bundled JS or CSS:
+
+```js
+import "axist";
 ```
 
 ## Used by

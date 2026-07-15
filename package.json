@@ -2,6 +2,19 @@
   "name": "axist",
   "version": "1.0.0",
   "description": "Minimal (~5kb) classless CSS library. Automatic dark mode.",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/axist.css",
+  "style": "dist/axist.css",
+  "exports": {
+    ".": "./dist/axist.css",
+    "./axist.css": "./dist/axist.css",
+    "./axist.min.css": "./dist/axist.min.css",
+    "./dist/axist.css": "./dist/axist.css",
+    "./dist/axist.min.css": "./dist/axist.min.css",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "clean": "npx rimraf dist",
     "dist": "npx mkdirp dist && cp src/index.css dist/axist.css && npx uglifycss src/index.css > dist/axist.min.css",
