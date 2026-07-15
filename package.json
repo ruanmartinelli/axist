@@ -16,13 +16,13 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "clean": "npx rimraf dist",
-    "dist": "npx mkdirp dist && cp src/index.css dist/axist.css && npx uglifycss src/index.css > dist/axist.min.css",
+    "clean": "rm -rf dist",
+    "dist": "mkdir -p dist && cp src/index.css dist/axist.css && lightningcss --minify src/index.css -o dist/axist.min.css",
     "build": "npm run clean && npm run dist",
     "test": "stylelint src/index.css",
-    "prepublishOnly": "npm run test",
+    "prepublishOnly": "npm run test && npm run build",
     "prepare": "npm run build",
-    "start": "npx serve"
+    "start": "serve"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,8 @@
   },
   "homepage": "https://github.com/ruanmartinelli/axist#readme",
   "devDependencies": {
+    "lightningcss-cli": "^1.32.0",
+    "serve": "^14.2.6",
     "stylelint": "^16.0.0",
     "stylelint-config-standard": "^36.0.0"
   },
