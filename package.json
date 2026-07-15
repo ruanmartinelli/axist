@@ -1,7 +1,7 @@
 {
   "name": "axist",
-  "version": "0.0.4",
-  "description": "Minimal (5kb) drop-in CSS library.",
+  "version": "1.0.0",
+  "description": "Minimal (~5kb) classless CSS library. Automatic dark mode.",
   "scripts": {
     "clean": "npx rimraf dist",
     "dist": "npx mkdirp dist && cp src/index.css dist/axist.css && npx uglifycss src/index.css > dist/axist.min.css",
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/ruanmartinelli/axist#readme",
   "devDependencies": {
-    "stylelint": "^13.5.0",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
   },
   "stylelint": {
     "extends": "stylelint-config-standard"

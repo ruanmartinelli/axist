@@ -2,7 +2,7 @@
     <img src="./logo.png" width="200" height="200" />
     <h1>axist</h1>
     <p><img src="https://github.com/ruanmartinelli/axist/workflows/build/badge.svg"/> <img src="https://img.shields.io/npm/v/axist.svg" /></p>
-    <p>Minimal (5kb) drop-in CSS library.</p>
+    <p>Minimal (~5kb) classless CSS library. Automatic dark mode.</p>
     <br>
     <br>
     <br>
