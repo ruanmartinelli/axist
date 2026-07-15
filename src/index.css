@@ -177,7 +177,9 @@ input[type="datetime-local"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input:not([type]) {
+input:not([type]),
+select,
+textarea {
   display: block;
   height: 2.25rem;
   padding: 0.5rem 0.75rem;
@@ -191,33 +193,16 @@ input:not([type]) {
 }
 
 select {
-  display: block;
-  height: 2.25rem;
-  padding: 0.5rem 2.25rem 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  color: var(--foreground);
-  background-color: var(--background);
-  border: 1px solid var(--input);
-  border-radius: var(--radius-input);
-  box-shadow: var(--shadow);
+  padding-right: 2.25rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
-  appearance: none;
 }
 
 textarea {
-  display: block;
+  height: auto;
   min-height: 4rem;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  color: var(--foreground);
-  background-color: var(--background);
-  border: 1px solid var(--input);
-  border-radius: var(--radius-input);
-  box-shadow: var(--shadow);
   resize: vertical;
-  appearance: none;
 }
 
 ::placeholder {
