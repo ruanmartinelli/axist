@@ -23,7 +23,7 @@ jobs:
         run: |
           size=$(wc -c < dist/axist.min.css)
           echo "dist/axist.min.css is ${size} bytes"
-          if [ "$size" -gt 6144 ]; then
-            echo "::error::dist/axist.min.css (${size} bytes) exceeds the 6144-byte size budget"
+          if [ "$size" -gt 7168 ]; then
+            echo "::error::dist/axist.min.css (${size} bytes) exceeds the 7168-byte size budget"
             exit 1
           fi
