@@ -17,7 +17,10 @@
 Import in your HTML:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/axist@latest/dist/axist.min.css"
+/>
 ```
 
 With npm:

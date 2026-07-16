@@ -1,3 +1,8 @@
+/*!
+ * axist — Minimal classless CSS library.
+ * https://github.com/ruanmartinelli/axist · MIT License
+ */
+
 :root {
   color-scheme: light;
 
@@ -61,7 +66,7 @@
   background-color: var(--background);
   color: var(--foreground);
   caret-color: var(--foreground);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {

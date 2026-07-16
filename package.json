@@ -19,7 +19,8 @@
     "clean": "rm -rf dist",
     "dist": "mkdir -p dist && cp src/index.css dist/axist.css && lightningcss --minify src/index.css -o dist/axist.min.css",
     "build": "npm run clean && npm run dist",
-    "test": "stylelint src/index.css",
+    "test": "stylelint src/index.css && prettier --check .",
+    "format": "prettier --write .",
     "prepublishOnly": "npm run test && npm run build",
     "prepare": "npm run build",
     "start": "serve"
@@ -36,6 +37,7 @@
   "homepage": "https://github.com/ruanmartinelli/axist#readme",
   "devDependencies": {
     "lightningcss-cli": "^1.32.0",
+    "prettier": "^3.9.5",
     "serve": "^14.2.6",
     "stylelint": "^16.0.0",
     "stylelint-config-standard": "^36.0.0"
