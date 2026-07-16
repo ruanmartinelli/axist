@@ -2,7 +2,7 @@
     <img src="./logo.png" width="200" height="200" />
     <h1>axist</h1>
     <p><img src="https://github.com/ruanmartinelli/axist/workflows/build/badge.svg"/> <img src="https://img.shields.io/npm/v/axist.svg" /></p>
-    <p>Minimal (5kb) drop-in CSS library.</p>
+    <p>Minimal (~5kb) classless CSS library. Automatic dark mode.</p>
     <br>
     <br>
     <br>
@@ -17,15 +17,22 @@
 Import in your HTML:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/axist@latest/dist/axist.min.css"
+/>
 ```
 
 With npm:
 
 ```bash
 npm i axist
+```
 
-# import '../node_modules/axist/dist/axist.min.css'
+Then, in your bundled JS or CSS:
+
+```js
+import "axist";
 ```
 
 ## Used by

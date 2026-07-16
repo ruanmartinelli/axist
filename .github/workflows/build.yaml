@@ -2,16 +2,28 @@ name: build
 
 on:
   push:
-    branches: [master, dev]
+    branches: [master]
   pull_request:
-    branches: [master, dev]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-      - run: npm install
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - run: npm run test
+      - run: npm run build
+      - name: Check size budget
+        run: |
+          size=$(wc -c < dist/axist.min.css)
+          echo "dist/axist.min.css is ${size} bytes"
+          if [ "$size" -gt 7168 ]; then
+            echo "::error::dist/axist.min.css (${size} bytes) exceeds the 7168-byte size budget"
+            exit 1
+          fi

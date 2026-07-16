@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="src/index.css" />
     <title>axist</title>
     <style>
@@ -12,13 +13,9 @@
         text-decoration: none;
       }
 
-      .title:hover {
-        color: #494949;
-      }
-
       .title::before {
         content: "# ";
-        color: var(--primary);
+        color: var(--muted-foreground);
       }
 
       .header {
@@ -27,16 +24,13 @@
       }
 
       .header > p {
-        color: #464646;
+        color: var(--muted-foreground);
       }
 
       .w-100 {
         width: 100%;
       }
 
-      .w-33 {
-        width: 33%;
-      }
       .w-50 {
         width: 49%;
       }
@@ -58,9 +52,11 @@
   <body>
     <main role="main">
       <div class="header">
-        <img src="./logo.png" width="200" />
+        <img src="./logo.png" width="200" alt="axist logo" />
         <h2>axist</h2>
-        <p>Minimal (5kb) drop-in CSS library.</p>
+        <p>
+          Minimal (5kb) classless CSS library. Now with automatic dark mode.
+        </p>
 
         <p>
           <a href="https://github.com/ruanmartinelli/axist">GitHub</a>
@@ -71,13 +67,18 @@
         <a class="title-link" href="#installation">
           <h3 class="title">Usage</h3>
         </a>
-        Install via npm:
-        <pre>npm i axist</pre>
-        <br />
-        Import in your HTML:
+        <p>Install via npm:</p>
+        <pre><code>npm i axist</code></pre>
+        <p>Or import in your HTML:</p>
         <pre>
-&lt;link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" /&gt;</pre
-        >
+&lt;link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" /&gt;</pre>
+        <p>
+          <small
+            >No classes needed &mdash; it styles plain
+            <abbr title="HyperText Markup Language">HTML</abbr> elements, like
+            the ones on this page.</small
+          >
+        </p>
       </section>
 
       <section id="typography">
@@ -100,7 +101,12 @@
             A paragraph (from the Ancient Greek παράγραφος, parágraphos, "to
             write beside") is a self-contained unit of a discourse in writing
             dealing with a particular point or idea. A paragraph consists of one
-            or more sentences.
+            or more sentences, and sometimes an
+            <a href="#typography">inline link</a> too.
+          </p>
+          <p>
+            You can <mark>highlight</mark> what matters, write H<sub>2</sub>O
+            with subscripts, or E=mc<sup>2</sup> with superscripts.
           </p>
         </div>
         <h5>Blockquotes</h5>
@@ -115,12 +121,14 @@
             <cite>- Elwood P. Dowd, Harvey</cite>
           </blockquote>
         </div>
+        <hr />
+        <p><small>Horizontal rules and small, muted text.</small></p>
       </section>
 
       <section id="forms">
-        <a class="title-link" href="#forms"
-          ><h3 class="title" class="title">Forms</h3></a
-        >
+        <a class="title-link" href="#forms">
+          <h3 class="title">Forms</h3>
+        </a>
         <form>
           <fieldset>
             <p>
@@ -130,6 +138,16 @@
                 class="w-100"
                 type="text"
                 placeholder="Text Input"
+              />
+            </p>
+            <p>
+              <label for="input__email">Email (required)</label>
+              <input
+                id="input__email"
+                class="w-100"
+                type="email"
+                required
+                placeholder="you@example.com"
               />
             </p>
             <p>
@@ -150,6 +168,16 @@
                 placeholder="Enter your message here"
                 class="w-100"
               ></textarea>
+            </p>
+            <p>
+              <label for="input__disabled">Disabled Input</label>
+              <input
+                id="input__disabled"
+                class="w-100"
+                type="text"
+                disabled
+                placeholder="Disabled"
+              />
             </p>
             <ul>
               <li>
@@ -210,6 +238,15 @@
             <li>Avocados</li>
           </ul>
         </div>
+        <div>
+          <h5>Description List</h5>
+          <dl>
+            <dt>Classless</dt>
+            <dd>A CSS library that styles bare HTML elements directly.</dd>
+            <dt>Token</dt>
+            <dd>A CSS custom property that defines part of the design.</dd>
+          </dl>
+        </div>
       </section>
 
       <section id="tables">
@@ -249,21 +286,34 @@
           <p><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>C</kbd></p>
 
           <h5>Code</h5>
-          <code class="w-100">npm install axist</code>
+          <p>Run <code>npm install axist</code> to get started.</p>
 
           <h5>Preformatted text</h5>
-          <pre>
-  .🎨 {
-    color: deeppink;
-    background-color: papayawhip;
-  }</pre
-          >
+          <pre><code>.🎨 {
+  color: deeppink;
+  background-color: papayawhip;
+}</code></pre>
+
+          <h5>Details</h5>
+          <details>
+            <summary>How big is axist?</summary>
+            <p>
+              About 2kb gzipped. It styles the HTML elements you already write —
+              no classes, no JavaScript.
+            </p>
+          </details>
+
+          <h5>Figure</h5>
+          <figure>
+            <img src="./logo.png" width="120" alt="axist logo" />
+            <figcaption>The axist logo, captioned.</figcaption>
+          </figure>
         </div>
       </section>
       <footer>
         <p>
-          <span style="float: left;">© 2021 Ruan Martinelli</span>
-          <a style="float: right;" href="#top">Go to top ↑</a>
+          <span style="float: left">© 2026 Ruan Martinelli</span>
+          <a style="float: right" href="#top">Go to top ↑</a>
         </p>
       </footer>
     </main>
