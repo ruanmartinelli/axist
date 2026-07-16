@@ -1,6 +1,6 @@
 {
   "name": "axist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal (~5kb) classless CSS library.",
   "files": [
     "dist"
