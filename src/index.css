@@ -338,6 +338,26 @@
   border-radius: var(--radius);
   overflow-x: auto;
   white-space: pre;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+:where(pre)::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+:where(pre)::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:where(pre)::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 9999px;
+}
+
+:where(pre)::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ring);
 }
 
 :where(pre code) {
